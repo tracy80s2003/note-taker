@@ -10,8 +10,8 @@ app.use(express.urlencoded({ extended: true}));
 app.use(express.json());
 app.use(express.static("public"))
 
-app.get("/api/notes", function(err, res) {
-})
+// app.get("/api/notes", function(err, res) {
+// })
 
 app.get("/api/notes", function(err, res) {
     try {
@@ -72,9 +72,9 @@ app.get("*", function(req, res) {
     res.sendFile(path.join(__dirname, "/public/index.html"));
 });
   
-app.get("/api/notes", function(req, res) {
-    return res.sendFile(path.json(__dirname, "/db/db.json"));
-});
+// app.get("/api/notes", function(req, res) {
+//     return res.sendFile(path.json(__dirname, "/db/db.json"));
+// });
 
 app.listen(PORT, () => {
     console.log(`Server is listening on http://localhost:${PORT}`)
